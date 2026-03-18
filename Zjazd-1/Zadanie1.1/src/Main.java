@@ -8,11 +8,11 @@ public class Main {
         double a = scanner.nextDouble();
         double b = scanner.nextDouble();
 
-        double area = (a * b)/2;
+        double area = (a * b) / 2;
 
         System.out.println("Area of a right triangle is: ");
         System.out.println(area);
 
         scanner.close();
-        }
     }
+}
