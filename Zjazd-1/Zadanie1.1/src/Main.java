@@ -5,7 +5,15 @@ public class Main {
         Scanner scanner = new Scanner(System.in);
 
         System.out.println("Enter a and b:");
+        while (!scanner.hasNextDouble()){
+            System.out.println("BŁĄD, Podaj poprwane dane:");
+            scanner.next();
+        }
         double a = scanner.nextDouble();
+        while (!scanner.hasNextDouble()){
+            System.out.println("BŁĄD, Podaj poprwane dane:");
+            scanner.next();
+        }
         double b = scanner.nextDouble();
 
         double area = (a * b) / 2;
