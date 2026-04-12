@@ -5,6 +5,7 @@ public class Pojazd extends Maszyna {
     static int maxLiczbaPojazdow;
 
     public Pojazd(int nrPojazdu, int maxLiczbaPojazdow){
+        nrPojazdu += 0;
         this.nrPojazdu = nrPojazdu;
     }
 }

@@ -23,5 +23,6 @@ public class Lokomotywa extends Maszyna {
         System.out.println("Rodzaj silnika: " + silnik);
         System.out.println("Maksymalna predkosc wynosi: " + maksymalnaPredkosc + " Km/h");
         System.out.println("Jest w stanie pociagnac " + iloscWagonow + " wagonow");
+        System.out.println();
     }
 }

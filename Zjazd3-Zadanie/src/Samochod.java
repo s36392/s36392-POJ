@@ -1,4 +1,5 @@
 public class Samochod extends Pojazd {
+
     public Samochod(int nrPojazdu, int maxLiczbaPojazdow) {
         super(nrPojazdu, maxLiczbaPojazdow);
     }
