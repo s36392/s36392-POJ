@@ -1,6 +1,6 @@
 public class Lokomotywa extends Maszyna {
-    protected double maksymalnaPredkosc;
-    protected int iloscWagonow;
+    private double maksymalnaPredkosc;
+    private int iloscWagonow;
 
     public Lokomotywa(String marka,
                       String nazwa,
