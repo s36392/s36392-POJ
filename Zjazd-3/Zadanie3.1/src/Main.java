@@ -15,10 +15,7 @@ public static abstract class Maszyna{
         HYBRYDOWY,
         SPALINOWY,
     }
-
 }
-
-
 
 //Zadanie 2
 
@@ -38,11 +35,15 @@ public static class Lokomotywa extends Maszyna {
         this.silnik = silnik;
         this.maksymalnaPredkosc = maksymalnaPredkosc;
         this.iloscWagonow = iloscWagonow;
-
     }
 
     public void wyswietl() {
         System.out.println("Lokomotywa jest marki: " + marka);
+        System.out.println("Nazywa sie: " + nazwa);
+        System.out.println("Pojemnosc silnika wynosi: " + pojemnoscSilnika + " litrow");
+        System.out.println("Rodzaj silnika: " + silnik);
+        System.out.println("Maksymalna predkosc wynosi: " + maksymalnaPredkosc + " Km/h");
+        System.out.println("Jest w stanie pociagnac " + iloscWagonow + " wagonow");
     }
 }
 
@@ -56,15 +57,12 @@ public static class Kosiarka extends Maszyna {
     public void setCzyMelekser(boolean czyMelekser) {
         this.czyMelekser = czyMelekser;
     }
-
     public void setCzyNaped(boolean czyNaped) {
         this.czyNaped = czyNaped;
     }
-
     public void setLiczbaOstrzy(int liczbaOstrzy) {
         this.liczbaOstrzy = liczbaOstrzy;
     }
-
 }
 
 //Zadanie 4
@@ -77,19 +75,18 @@ public static class Pojazd extends Maszyna {
 
     public Pojazd(int nrPojazdu, int maxLiczbaPojazdow){
         this.nrPojazdu = nrPojazdu;
-        this.maxLiczbaPojazdow = maxLiczbaPojazdow;
     }
 }
 
-public static void main(String[] args) {
-    Lokomotywa lok = new Lokomotywa(
-            "Ford",                         // marka
-            "Intercity",                    // nazwa
-            2.0,                            // pojemnoscSilnika
-            Maszyna.rodzajSilnika.ELEKTRYCZNY,      // silnik
-            200.0,                          // maksymalnaPredkosc
-            5                               // iloscWagonow
-    );
+public static class Samochod extends Pojazd {
+    public Samochod(int nrPojazdu, int maxLiczbaPojazdow) {
+        super(nrPojazdu, maxLiczbaPojazdow);
+    }
 
-    lok.wyswietl(); // prints: Lokomotywa jest marki: Ford
+    enum segment{A,B,C,D,E,F,G,H,J,M};
+    int VIN;
+}
+
+public static void main(String[] args) {
+
 }
