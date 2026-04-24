@@ -20,6 +20,7 @@ public class Jednoslad extends Pojazd{
         this.nazwa = nazwa;
         this.pojemnoscSilnika = pojemnoscSilnika;
         this.silnik = silnik;
+        this.typ = typ;
     }
 
     public Jednoslad(String marka, String nazwa, typJednosladu typ) {

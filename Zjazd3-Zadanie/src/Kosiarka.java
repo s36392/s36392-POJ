@@ -13,16 +13,16 @@ public class Kosiarka extends Maszyna {
         this.nazwa = nazwa;
         this.pojemnoscSilnika = pojemnoscSilnika;
         this.silnik = silnik;
-        this.czyNaped = czyNaped;
-        this.czyMelekser = czyMelekser;
-        this.liczbaOstrzy = liczbaOstrzy;
     }
 
     public void setCzyMelekser(boolean czyMelekser) {
+        this.czyMelekser = czyMelekser;
     }
     public void setCzyNaped(boolean czyNaped) {
+        this.czyNaped = czyNaped;
     }
     public void setLiczbaOstrzy(int liczbaOstrzy) {
+        this.liczbaOstrzy = liczbaOstrzy;
     }
 
     public void wyswietl(){

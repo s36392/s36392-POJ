@@ -1,76 +1,91 @@
+import java.util.ArrayList;
+import java.util.List;
+
 public class ParkMaszynowy {
     public static void main(String[] args){
         Lokomotywa lokomotywa1 = new Lokomotywa(
-                "Ursus",
-                "Pociag",
-                2.0,
+                "Bavarian",
+                "S3/6",
+                26200.0,
                 Maszyna.rodzajSilnika.SPALINOWY,
-                200.0,
-                20){};
+                120.0,
+                20);
         Lokomotywa lokomotywa2 = new Lokomotywa(
-                "Japan",
-                "Maglev",
+                "Mitsubishi",
+                "L0",
                 0,
                 Maszyna.rodzajSilnika.ELEKTRYCZNY,
-                600.0,
-                14){};
+                550.0,
+                10);
         Kosiarka kosiarka1 = new Kosiarka(
                 "Ursus",
                 "Kosa",
                 1.4,
-                Maszyna.rodzajSilnika.SPALINOWY,
+                Maszyna.rodzajSilnika.HYBRYDOWY,
                 true,
                 false,
-                5
-        ){};
+                1
+        );
         Kosiarka kosiarka2 = new Kosiarka(
-                "Ursula",
-                "Kosiarka",
+                "STIHL",
+                "Kosiarka co kosi",
                 1.4,
                 Maszyna.rodzajSilnika.SPALINOWY,
                 true,
                 false,
                 5
-        ){};
+        );
         Samochod samochod1 = new Samochod(
-                "Ford",
-                "Mustang",
+                "Toyota",
+                "Supra",
                 3.4,
                 Maszyna.rodzajSilnika.SPALINOWY,
-                Samochod.segmentAuta.A,
+                Samochod.segmentAuta.G,
                 12345678,
-                0,
-                12
-        ){};
+                147,
+                212
+        );
         Samochod samochod2 = new Samochod(
-                "Tesla",
-                "Model L",
-                3.4,
-                Maszyna.rodzajSilnika.ELEKTRYCZNY,
-                Samochod.segmentAuta.C,
+                "Shelby",
+                "Mustang",
+                7015,
+                Maszyna.rodzajSilnika.SPALINOWY,
+                Samochod.segmentAuta.G,
                 12231358,
-                0,
-                12
-        ){};
-        `Jednoslad jednoslad1 = new Jednoslad(
-                "Ford",
-                "Focus",
-                1.2,
+                550,
+                570
+        );
+        Jednoslad jednoslad1 = new Jednoslad(
+                "Suzuki",
+                "GSX-R",
+                749,
                 Maszyna.rodzajSilnika.SPALINOWY,
                 Jednoslad.typJednosladu.MOTOCYKL,
-                400,
-                5
-        ){};`
+                148,
+                86
+        );
         Jednoslad jednoslad2 = new Jednoslad(
-                0,
-                12,
+                "BSD",
                 "BMX",
-                "Rower",
-                4.3,
-                Maszyna.rodzajSilnika.SPALINOWY,
                 Jednoslad.typJednosladu.ROWER
-        ){};
+        );
 
-        for
+        List<Maszyna> park = new ArrayList<>();
+        park.add(lokomotywa1);
+        park.add(lokomotywa2);
+        park.add(kosiarka1);
+        park.add(kosiarka2);
+        park.add(samochod1);
+        park.add(samochod2);
+        park.add(jednoslad1);
+        park.add(jednoslad2);
+
+        for (Maszyna numer : park){
+            numer.wyswietl();
+        }
+
+        kosiarka1.setLiczbaOstrzy(151900);
+        System.out.println("Po zmianie kosiarki: ");
+        kosiarka1.wyswietl();
     }
 }

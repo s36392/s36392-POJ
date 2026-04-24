@@ -9,8 +9,16 @@ public class Pojazd extends Maszyna {
                   double momentObrotowy){
         nrPojazdu = index;
         index++;
-        maxLiczbaPojazdow = 1;
+        maxLiczbaPojazdow = 8;
         this.moc = moc;
         this.momentObrotowy = momentObrotowy;
     }
+
+    public void wyswietl() {
+        System.out.println("Nr pojazdu: " + nrPojazdu + "/" + maxLiczbaPojazdow);
+        System.out.println("Moc: " + moc);
+        System.out.println("Moment obrotowy: " + momentObrotowy);
+        System.out.println();
+    }
+
 }
