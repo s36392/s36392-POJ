@@ -3,13 +3,13 @@ public class Pojazd extends Maszyna {
     protected double momentObrotowy;
     int nrPojazdu;
     static int maxLiczbaPojazdow;
-    private static int index = 0;
+    private static int index = 1;
 
     public Pojazd(double moc,
                   double momentObrotowy){
         nrPojazdu = index;
         index++;
-        maxLiczbaPojazdow = 8;
+        maxLiczbaPojazdow = 4;
         this.moc = moc;
         this.momentObrotowy = momentObrotowy;
     }
