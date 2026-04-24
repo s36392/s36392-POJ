@@ -2,7 +2,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class ParkMaszynowy {
-    public static void main(String[] args){
+    static void main(){
         Lokomotywa lokomotywa1 = new Lokomotywa(
                 "Bavarian",
                 "S3/6",
