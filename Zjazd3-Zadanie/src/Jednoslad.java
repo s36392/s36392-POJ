@@ -1,19 +1,6 @@
 public class Jednoslad extends Pojazd{
 
-    public Jednoslad(int nrPojazdu,
-                     int maxLiczbaPojazdow,
-                     String marka,
-                     String nazwa,
-                     double pojemnoscSilnika,
-                     rodzajSilnika silnik,
-                     typJednosladu typ) {
-        super(nrPojazdu, maxLiczbaPojazdow);
-        this.marka = marka;
-        this.nazwa = nazwa;
-        this.pojemnoscSilnika = pojemnoscSilnika;
-        this.silnik = silnik;
-    }
-
+    private typJednosladu typ;
     enum typJednosladu{
         MOTOCYKL,
         ROWER,
@@ -21,11 +8,34 @@ public class Jednoslad extends Pojazd{
         SKUTER
     }
 
-    public void wyswietl(){
-        System.out.println("Samochod jest marki: " + marka);
+    public Jednoslad(String marka,
+                     String nazwa,
+                     double pojemnoscSilnika,
+                     rodzajSilnika silnik,
+                     typJednosladu typ,
+                     double moc,
+                     double momentObrotowy) {
+        super(moc, momentObrotowy);
+        this.marka = marka;
+        this.nazwa = nazwa;
+        this.pojemnoscSilnika = pojemnoscSilnika;
+        this.silnik = silnik;
+    }
+
+    public Jednoslad(String marka, String nazwa, typJednosladu typ) {
+        super(0.0, 0.0);
+        this.marka = marka;
+        this.nazwa = nazwa;
+        this.typ = typ;
+    }
+
+    public void wyswietl() {
+        System.out.println("Jednoslad jest marki: " + marka);
         System.out.println("Nazywa sie: " + nazwa);
-        System.out.println("Pojemnosc silnika wynosi: " + pojemnoscSilnika + " litrow");
-        System.out.println("Rodzaj silnika: " + silnik);
+        if (pojemnoscSilnika > 0)
+            System.out.println("Pojemnosc silnika wynosi: " + pojemnoscSilnika + " litrow");
+        if (silnik != null)
+            System.out.println("Rodzaj silnika: " + silnik);
         System.out.println("Rodzaj jednosladu: " + typ);
         System.out.println("Nr pojazdu: " + nrPojazdu + "/" + maxLiczbaPojazdow);
         System.out.println();

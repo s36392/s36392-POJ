@@ -1,17 +1,17 @@
 public class Samochod extends Pojazd {
-    private segmentAuta segment;
-    private int VIN;
+    private final segmentAuta segment;
+    private final int VIN;
 
-    public Samochod(
+    protected Samochod(
             String marka,
             String nazwa,
             double pojemnoscSilnika,
             rodzajSilnika silnik,
             segmentAuta segment,
             int VIN,
-            int nrPojazdu,
-            int maxLiczbaPojazdow) {
-        super(nrPojazdu, maxLiczbaPojazdow);
+            double moc,
+            double momentObrotowy) {
+        super(moc, momentObrotowy);
         this.marka = marka;
         this.nazwa = nazwa;
         this.pojemnoscSilnika = pojemnoscSilnika;
@@ -20,7 +20,7 @@ public class Samochod extends Pojazd {
         this.VIN = VIN;
     }
 
-    enum segmentAuta{A,B,C,D,E,F,G,H,J,M};
+    enum segmentAuta{A,B,C,D,E,F,G,H,J,M}
 
     public void wyswietl(){
         System.out.println("Samochod jest marki: " + marka);

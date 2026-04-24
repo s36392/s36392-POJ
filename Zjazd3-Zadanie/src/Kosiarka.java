@@ -2,7 +2,7 @@ public class Kosiarka extends Maszyna {
     private boolean czyMelekser;
     private boolean czyNaped;
     private int liczbaOstrzy;
-    public Kosiarka(String marka,
+    protected Kosiarka(String marka,
                     String nazwa,
                     double pojemnoscSilnika,
                     rodzajSilnika silnik,
@@ -13,6 +13,9 @@ public class Kosiarka extends Maszyna {
         this.nazwa = nazwa;
         this.pojemnoscSilnika = pojemnoscSilnika;
         this.silnik = silnik;
+        this.czyNaped = czyNaped;
+        this.czyMelekser = czyMelekser;
+        this.liczbaOstrzy = liczbaOstrzy;
     }
 
     public void setCzyMelekser(boolean czyMelekser) {

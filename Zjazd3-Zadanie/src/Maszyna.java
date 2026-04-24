@@ -8,4 +8,6 @@ public abstract class Maszyna{
         HYBRYDOWY,
         SPALINOWY,
     }
+
+    public abstract void wyswietl();
 }

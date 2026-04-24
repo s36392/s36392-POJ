@@ -52,15 +52,15 @@ public class ParkMaszynowy {
                 0,
                 12
         ){};
-        Jednoslad jednoslad1 = new Jednoslad(
-                0,
-                12,
-                "Jezdzidlo",
-                "Motork",
-                4.3,
+        `Jednoslad jednoslad1 = new Jednoslad(
+                "Ford",
+                "Focus",
+                1.2,
                 Maszyna.rodzajSilnika.SPALINOWY,
-                Jednoslad.typJednosladu.MOTOCYKL
-        ){};
+                Jednoslad.typJednosladu.MOTOCYKL,
+                400,
+                5
+        ){};`
         Jednoslad jednoslad2 = new Jednoslad(
                 0,
                 12,
@@ -71,13 +71,6 @@ public class ParkMaszynowy {
                 Jednoslad.typJednosladu.ROWER
         ){};
 
-        lokomotywa1.wyswietl();
-        lokomotywa2.wyswietl();
-        kosiarka1.wyswietl();
-        kosiarka2.wyswietl();
-        samochod1.wyswietl();
-        samochod2.wyswietl();
-        jednoslad1.wyswietl();
-        jednoslad2.wyswietl();
+        for
     }
 }
