@@ -4,6 +4,7 @@ public class Main {
         for(int i = 0; i <= 9; i++){
             points[i] = new MyPoint(i+1, i+1);
         }
+        points.get()
     }
 }
 
