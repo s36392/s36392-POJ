@@ -1,12 +1,13 @@
 public class Main {
-    static void main(){
+        static void main(){
         ResizableCircle circle = new ResizableCircle(5.0);
         int percent = 125;
 
-        System.out.println("Radius is: " + circle.getRadius());
-        System.out.println("Perimeter is: " + circle.getPerimeter());
-        System.out.println("Area is: " + circle.getArea());
+        System.out.printf("Radius is: %.2f%n", circle.getRadius());
+        System.out.printf("Perimeter is: %.2f%n", circle.getPerimeter());
+        System.out.printf("Area is: %.2f%n", circle.getArea());
         circle.resize(percent);
-        System.out.println("Circle  resized by " + percent + "% has a radius of: " + circle.getRadius());
+        System.out.print("Circle  resized by " + percent + "% has a radius of: ");
+        System.out.printf("%.2f%n", circle.getRadius());
     }
 }
