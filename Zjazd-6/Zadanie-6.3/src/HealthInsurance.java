@@ -1,13 +1,13 @@
-public class LifeInsurance extends Insurance {
+public class HealthInsurance extends Insurance {
 
-    public LifeInsurance(){
-        super("LifeInsurance");
+    public HealthInsurance(){
+        super("HealthInsurance");
         setCost();
     }
 
     @Override
     public void setCost(){
-        monthlyPrice = 36.0;
+        monthlyPrice = 196.0;
     }
 
     @Override
