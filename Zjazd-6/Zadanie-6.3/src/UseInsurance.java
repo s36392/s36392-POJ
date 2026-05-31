@@ -1,21 +1,9 @@
-import java.util.Scanner;
+void main() {
+    InputValidation userInput = new InputValidation();
+    Scanner scanner = new Scanner(System.in);
+    final String prompt = "Select your insurance type:\n1. Life Insurance\n2. Health Insurance";
 
-public class UseInsurance {
-    public void main(){
-        InputValidation userInput = new InputValidation();
-        Scanner scanner = new Scanner(System.in);
-        final String prompt = "Select your insurance type: \n1.Life Insurance\n2.Health Insurance";
-
-        Insurance insurance = new Insurance(userInput.getUserInput(scanner, prompt)) {
-            @Override
-            public void setCost() {
-
-            }
-
-            @Override
-            public void display() {
-
-            }
-        };
-    }
+    Insurance insurance = Insurance.create(userInput.getUserInput(scanner, prompt));
+    insurance.display();
+    scanner.close();
 }
