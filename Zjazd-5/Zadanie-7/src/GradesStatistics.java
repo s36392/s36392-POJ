@@ -1,3 +1,5 @@
+import org.jetbrains.annotations.NotNull;
+
 import java.util.*;
 
 public class GradesStatistics {
@@ -39,7 +41,7 @@ public class GradesStatistics {
         return sum / index;
     }
 
-    private static void printGradesMedian(int index, ArrayList<Student> students) {
+    private static void     printGradesMedian(int index, @NotNull ArrayList<Student> students) {
         students.sort(Comparator.comparingDouble(Student::getGrade));
         double median;
         if (index % 2 == 0) {
